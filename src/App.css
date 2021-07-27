@@ -1,9 +1,13 @@
 .header{
   margin-left: 24px;
+  text-align: center;
+  background:rgba(0, 0, 200, 0.883);
+  color: white;
 }
 
 .footer{
   text-align: center;
+  background:rgba(0, 0, 200, 0.883);
 }
 
 .search-container{
@@ -19,17 +23,18 @@
 .search-btn{
   margin: 24px 0;
   color: white;
-  background: black;
+  background: red;
   padding: 12px 24px;
   font-size: 16px;
   border-style: none;
 }
 
 .representative-info{
-  margin: 18px 0;
+  margin: 18px 0; 
 }
 
 .office-title{
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
+  color: rgba(0, 0, 200, 0.883);
 }
