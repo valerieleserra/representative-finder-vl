@@ -1,8 +1,20 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
 .header{
-  margin-left: 24px;
   text-align: center;
   background:rgba(0, 0, 200, 0.883);
   color: white;
+}
+
+.header-title{
+  font-weight:bold;
+
 }
 
 .footer{
@@ -11,7 +23,12 @@
 }
 
 .search-container{
-  text-align: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 24px;
 }
 
 .search-bar {
@@ -20,13 +37,15 @@
   font-size: 36px;
 }
 
-.search-btn{
+.submit-btn{
   margin: 24px 0;
   color: white;
   background: red;
   padding: 12px 24px;
   font-size: 16px;
   border-style: none;
+  border-radius: 8px;
+  letter-spacing: 2px;
 }
 
 .representative-info{
@@ -37,4 +56,37 @@
   font-weight: bold;
   font-size: 20px;
   color: rgba(0, 0, 200, 0.883);
+}
+
+ul{
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  align-items: flex-start;
+}
+.menu-item a{
+  color: white;
+  font-size: 26px;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+.sign-up-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 24px;
+  flex-direction: column;
+}
+
+.form-label{
+  font-size: 36px;
+  margin: 16px;
+  float: right;
+}
+
+.form-input{
+  height: 42px;
+  min-width: 250px;
+  font-size: 36px;
+  margin: 16 px;
 }
