@@ -10,6 +10,12 @@
   text-align: center;
   background:rgba(0, 0, 200, 0.883);
   color: white;
+  margin-bottom: 50px;
+}
+
+.image-container{
+  height: 850px;
+  overflow: hidden;
 }
 
 .header-title{
@@ -17,9 +23,13 @@
 
 }
 
-.footer{
+.footer {
   text-align: center;
-  background:rgba(0, 0, 200, 0.883);
+  padding: 45px;
+  margin-top: 100px;
+  color: white;
+  background: rgba(0, 0, 200, 0.883);
+
 }
 
 .search-container{

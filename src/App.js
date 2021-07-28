@@ -1,14 +1,17 @@
+import { useState } from "react";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RepresentativeSearch from './components/RepresentativeSearch';
-import SignUp from './components/SignUp'
-import SignIn from './components/SignIn'
-import Home from './components/Home'
-import './App.css';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import Home from './components/Home';
+import './App.css'
 
 
 function App() {
+  const [user,setUser] = useState()
   return (
       <Router>
           <div>
@@ -16,13 +19,16 @@ function App() {
            <div>
               <Switch>
                 <Route path="/signin">
-                    <SignIn />
+                    <SignIn setUser={setUser} />
                   </Route>
                 <Route path="/signup">
-                    <SignUp />
+                    <SignUp setUser={setUser} />
                 </Route>
                 <Route path="/search">
-                    <RepresentativeSearch/>
+                  {user
+                    ? <RepresentativeSearch user={user}/>
+                    : <SignIn setUser={setUser} />
+                  }
               </Route>
               <Route path="/">
                 <Home />
@@ -32,7 +38,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-  )
+  );
 }
 
 export default App;

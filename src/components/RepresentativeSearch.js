@@ -2,23 +2,23 @@ import {useState} from 'react'
 import {APIKEY} from "../config"
 import RepresentativeSearchResults from './RepresentativeSearchResults'
 
-function RepresentativeSearch(){
+function RepresentativeSearch({user}){
     const[address , setAddress] = useState('')
     const[offices , setOffices] = useState([])
     const[officials , setOfficials] = useState([])
 
+    console.log('USER ===>', user)
+
     const searchRepresentatives = () => {
         console.log('searching...')
         fetch(`https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${APIKEY}`)
-        .then(response => response.json())
-        .then(json => {
-            setOffices(json.offices)
-            setOfficials(json.officials)
-            return
+            .then(response => response.json())
+            .then(json => {
+                setOffices(json.offices)
+                setOfficials(json.officials)
+                return
         })
-        .catch(error => console.log(error))
-        //fetch for civic info endpoint
-        // then store results in my state
+            .catch(error => console.log(error))
     }
 
     return(

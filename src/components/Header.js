@@ -23,8 +23,8 @@ function Header(){
                     Sign In
         </Link>
         </li>
-         </ul>
-    </div>
+    </ul>
+</div>
     )
 }
 
