@@ -7,44 +7,55 @@
 }
 
 .header{
-  text-align: center;
   background:rgba(0, 0, 200, 0.883);
   color: white;
   margin-bottom: 50px;
+  padding: 20px;
 }
 
-.image-container{
-  height: 850px;
-  overflow: hidden;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px;
 }
 
 .header-title{
   font-weight:bold;
+  font-family: 'Noticia Text', serif;
+}
 
+.page-title{
+  font-family: 'Noticia Text', serif;
 }
 
 .footer {
   text-align: center;
-  padding: 45px;
-  margin-top: 100px;
+  padding: 20px;
+  margin-top:400px;
   color: white;
   background: rgba(0, 0, 200, 0.883);
 
 }
 
-.search-container{
-  flex-direction: column;
+.search-container {
   display: flex;
-  margin-top: 25px;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
   justify-content: space-around;
+  align-items: center;
   margin: 24px;
 }
 
 .search-bar {
-  width: 650px;
-  height: 50px; 
-  font-size: 36px;
+  width: 750px;
+  height: 50px;
+  font-size: 32px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ed563c
 }
 
 .submit-btn{
@@ -86,15 +97,26 @@ ul{
   justify-content: space-around;
   margin: 24px;
   flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 24px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-label{
+  font-family: 'Noticia Text', serif;
   font-size: 36px;
   margin: 16px;
   float: right;
 }
 
 .form-input{
+
   height: 42px;
   min-width: 250px;
   font-size: 36px;

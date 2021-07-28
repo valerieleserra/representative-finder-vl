@@ -7,11 +7,14 @@ import RepresentativeSearch from './components/RepresentativeSearch';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Home from './components/Home';
+import UserProfile from "./components/UserProfile";
 import './App.css'
 
 
 function App() {
+  
   const [user,setUser] = useState()
+  
   return (
       <Router>
           <div>
@@ -30,7 +33,10 @@ function App() {
                     : <SignIn setUser={setUser} />
                   }
               </Route>
-              <Route path="/">
+              <Route path="/user-profile">
+                <UserProfile />
+                </Route>
+                <Route path="/">
                 <Home />
                 </Route>
               </Switch>
@@ -40,5 +46,4 @@ function App() {
       </Router>
   );
 }
-
 export default App;

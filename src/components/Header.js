@@ -23,6 +23,11 @@ function Header(){
                     Sign In
         </Link>
         </li>
+        <li className="menu-item">
+                    <Link to="/user-profile">
+                    User Profile
+        </Link>
+        </li>
     </ul>
 </div>
     )
